@@ -6,14 +6,28 @@
 
 body {
     height: 100vh;
+    background-color: lavender;
 }
 
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+.project {
+    margin-top: 25px;
+}
 .card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     height: auto;
-    background-color: #FAFAF9;
+    background-color: lavender;
+    gap: 15px;
 }
 
 .card {
@@ -21,19 +35,23 @@ body {
     height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #FAFAF9;
-    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
     border-radius: 10px;
+    text-align: center;
+    gap: 10px;
+}
+
+.card-img {
+    height: 300px;
+    width: 100%;
 }
 
 img {
-    background-size: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background-size: cover;
 }
 
 a {
     text-decoration: none;
-    width: 100%;
 }
