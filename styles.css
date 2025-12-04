@@ -7,6 +7,7 @@
 #navbar {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,9 +36,35 @@
     background-color: #3a3d40;
 }
 
-body {
-    height: 100vh;
-    background-color: lavender;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 3;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 #about-section {
@@ -66,9 +93,22 @@ body {
 
 #about-section h3 {
     color: #000;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.5rem;
     width: 100%;
+}
+
+#about-section p {
+    font-weight: bold;
+}
+
+#about-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+#about-section a:visited {
+    color: #000;
 }
 
 #skills {
@@ -251,42 +291,77 @@ p {
     text-align: center;
 }
 
-.card-container {
+#projects {
+    margin: 50px 50px 0 50px;
+    padding-top: 50px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#projects h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #be3144;
+}
+
+.projects-container {
+    flex: 1;
+    width: 100%;
 }
 
 .card {
-    width: 400px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    background-color: #FAFAF9;
-    border-radius: 10px;
+    width: 45%;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.card-title {
     text-align: center;
-    gap: 10px;
+    padding: 5px;
 }
 
-.card-img {
+.card-text {
+    text-align: center;
+    padding: 5px;
+}
+
+.tile-image {
+    width: 100%;
     height: 300px;
-    width: 100%;
+    object-fit: cover;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-
-a {
+.card a {
     text-decoration: none;
+    color: #000;
+}
+
+.card a:visited {
+    color: #000;
+}
+
+.centered {
+    float: none;
+    margin: 15px auto 15px auto;
+    clear: both;
+    width: 80%;
+}
+
+.centered > a > .tile-image {
+    object-fit: contain;
 }
 
 #contact {
@@ -301,6 +376,7 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 #contact > h2 {
@@ -314,11 +390,11 @@ a {
 }
 
 .contact-container {
-    position: absolute;
-    top: 75%;
-    left: 27%;
+    width: 100%;
     display: flex;
-    gap: 145px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transform: translate(0, 150px);
 }
 
 .contact-card {
@@ -332,7 +408,47 @@ a {
     padding: 15px;
 }
 
+@media (min-width: 888px) {
+    .centered {
+        width: 50%;
+    }
+
+    .centered > a > .tile-image {
+        object-fit: cover;
+    }
+}
+
 @media (max-width: 790px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #navbar ul {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #be3144;
+        width: 100%;
+        text-align: center;
+        transition: right 0.3s ease;
+        padding-top: 60px;
+        height: 100vh;
+    }
+
+    #navbar ul.active {
+        right: 0;
+    }
+
+    #navbar li {
+        margin: 1rem 0;
+    }
+
+    #navbar a {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
     #about-section {
         background-position: 75% center;
         align-items: center;
@@ -346,13 +462,29 @@ a {
     #contact {
         background-position: 43% center;
     }
+}
 
+@media (max-width: 700px) {
+    #contact {
+        justify-content: flex-end;
+    }
     .contact-container {
-        gap: 30px;
+        justify-content: center;
+        gap: 5px;
+        transform: translateY(-90px);
+    }
+}
+
+@media (max-width: 665px) {
+    .card {
+        display: block;
+        width: 100%;
+        text-align: justify;
+        margin-bottom: 30px;
     }
 
-    .contact-card {
-        width: 50px;
+    .centered > a > .tile-image {
+        object-fit: cover;
     }
 }
 
@@ -386,5 +518,19 @@ a {
 
     .skill span {
         font-size: 0.8rem;
+    }
+
+    .card-text {
+        font-size: 11px;
+    }
+
+    .contact-container {
+        transform: translateY(-150px);
+        gap: 50px;
+    }
+
+    .contact-card {
+        width: auto;
+        padding: 10px;
     }
 }

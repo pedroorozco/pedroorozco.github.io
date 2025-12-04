@@ -9,7 +9,12 @@
   <body>
     <header>
         <nav id="navbar">
-            <ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
                 <li><a href="#about-section">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -22,6 +27,7 @@
             <div class="about-text-container">
                 <h1>CSCE 190: Pedro Orozco</h1>
                 <h3>My portfolio website</h3>
+                <p> My resume: <a href="files/Resume_Orozco_Pedro.pdf">PDF version</a> | <a href="files/public/Resume/resume.html">HTML version</a></p>
             </div>
         </section>
         <section id="skills">
@@ -66,33 +72,96 @@
             </div>
         </section>
         <section id="projects">
-            <h2>Projects</h2>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-img"><a href="files/statement.pdf"><img src="images/problem.png" alt="Problem Statement screenshot"></a></div>
-                    <a href="files/statement.pdf"><h3>Problem Statement</h3></a>
-                    <p>UofSC students struggle to quickly determine whether required books are freely and legally
+            <div class="projects-container">
+                <h2>Projects</h2>
+                <div class="left card">
+                    <a href="files/statement.pdf"><img class="tile-image" src="images/problem.png" alt="Problem Statement Screenshot"></a>
+                    <a href="files/statement.pdf"><h3 class="card-title">Problem Statement</h3></a>
+                    <p class="card-text">
+                        UofSC students struggle to quickly determine whether required books are freely and legally
                         accessible because availability is scattered across campus library systems and public‑domain
                         repositories.
                     </p>
                 </div>
-                <div class="card">
-                    <div class="card-img"><a href="files/Affinity_DOC.pdf"><img src="images/Affinity_IMG.png" alt="Problem Statement screenshot"></a></div>
-                    <a href="files/Affinity_DOC.pdf"><h3>Affinity Diagram</h3></a>
-                    <p>
+                <div class="right card">
+                    <a href="files/Affinity_DOC.pdf"><img class="tile-image" src="images/Affinity_IMG.png" alt="Affinity Diagram Screenshot"></a>
+                    <a href="files/Affinity_DOC.pdf"><h3 class="card-title">Affinity Diagram</h3></a>
+                    <p class="card-text">
                         This affinity diagram organizes potential solution (book finder webpage similar to pages for
                         flights such as TripAdvisor but for books) into categories such as source choices, community,
                         UX, etc. It helps clarify the scope and potential obstacles for potential solution.
                     </p>
                 </div>
-                <div class="card">
-                    <div class="card-img"><a href="files/Sketches.pdf"><img src="images/Mock_Homepage.png" alt="Sketches screenshot"></a></div>
-                    <a href="files/Sketches.pdf"><h3>Sketches</h3></a>
-                    <p>
+
+                <div class="centered card">
+                    <a href="files/Sketches.pdf"><img class="tile-image" src="images/Mock_Homepage.png" alt="Sketches screenshot"></a>
+                    <a href="files/Sketches.pdf"><h3 class="card-title">Sketches</h3></a>
+                    <p class="card-text">
                         Basic sketches outlining specific components of a Book Finder webpage including a mock homepage,
                         mock search filters/sorting options, mock page displaying specific book details, and a mock page
                         displaying what results should look like after a user searches for a book. Sketches were
                         initially created with Chat-GPT for template, but later edited by myself to ensure consistency and layout
+                    </p>
+                </div>
+                <div class="right card">
+                    <a href="files/public/Pokedex/index.html"><img class="tile-image" src="images/pokedex.png" alt="Pokedex Project Screenshot"></a>
+                    <a href="files/public/Pokedex/index.html"><h3 class="card-title">Pokedex Project</h3></a>
+                    <p class="card-text">
+                        Pokemon Fire Red webpage using HTML/CSS/JS and API requests to fill in Pokemon cards
+                    </p>
+                </div>
+
+
+                <div class="left card">
+                    <a href="files/public/Penguin/penguin.html"><img class="tile-image" src="https://i.ibb.co/xMCL17G/penguin-Clock.jpg" alt="Penguin Clock Project Screenshot"></a>
+                    <a href="files/public/Penguin/penguin.html"><h3 class="card-title">Penguin Clock Project</h3></a>
+                    <p class="card-text">
+                        Penguin Clock made with HTML/CSS/JS
+                    </p>
+                </div>
+                <div class="centered card">
+                    <a href="files/public/Cafentanyl/index.html"><img class="tile-image" src="images/cafe.png" alt="Cafe Project Screenshot"></a>
+                    <a href="files/public/Cafentanyl/index.html"><h3 class="card-title">Cafe Webpage (Work in Progress)</h3></a>
+                    <p class="card-text">
+                        Basic Webpage designed for Cafe
+                    </p>
+                </div>
+
+                <div class="left card">
+                    <a href="files/public/JJK_Promo/index.html"><img class="tile-image" src="images/jjk.png" alt="JJK Project Screenshot"></a>
+                    <a href="files/public/JJK_Promo/index.html"><h3 class="card-title">JJK Page (Work in Progress)</h3></a>
+                    <p class="card-text">
+                        JJK Info Page design
+                    </p>
+                </div>
+                <div class="right card">
+                    <a href="files/public/Responsive-Homepage/index.html"><img class="tile-image" src="images/webpage_design_one.png" alt="Webpage Design Project Screenshot"></a>
+                    <a href="files/public/Responsive-Homepage/index.html"><h3 class="card-title">Basic webpage design</h3></a>
+                    <p class="card-text">
+                        Basic webpage design
+                    </p>
+                </div>
+
+                <div class="centered card">
+                    <a href="files/public/basic-web-design-agency-main/index.html"><img class="tile-image" src="images/webpage_design_two.png" alt="Webpage Design Project Screenshot"></a>
+                    <a href="files/public/basic-web-design-agency-main/index.html"><h3 class="card-title">Basic webpage design</h3></a>
+                    <p class="card-text">
+                        Another simple basic webpage design
+                    </p>
+                </div>
+                <div class="left card">
+                    <a href="https://github.com/pedroorozco/EGR_283_data_structures"><img class="tile-image" src="images/data_structures.jpg" alt="Data Structures Screenshot"></a>
+                    <a href="https://github.com/pedroorozco/EGR_283_data_structures"><h3 class="card-title">Data Structures in Java (Repo)</h3></a>
+                    <p class="card-text">
+                        Github repository containing various data structures made in Java for EGR-283 Course
+                    </p>
+                </div>
+
+                <div class="right card">
+                    <a href="https://github.com/pedroorozco/freecodecamp_projects"><img class="tile-image" src="images/download.png" alt="Freeecodecamp Screenshot"></a>
+                    <a href="https://github.com/pedroorozco/freecodecamp_projects"><h3 class="card-title">FreeCodeCamp Repo</h3></a>
+                    <p class="card-text">
+                        Github repository containing all completed projects for FreeCodeCamp's Responsive Web Design certification
                     </p>
                 </div>
             </div>
@@ -121,5 +190,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
