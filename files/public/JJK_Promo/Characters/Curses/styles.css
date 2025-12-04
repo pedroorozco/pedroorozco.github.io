@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    margin: 0 20px 0 20px;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+  position: relative;
+  z-index: 20;
+}
+
+header img {
+  width: 20%;
+  height: auto;
+  min-width: 140px;
+}
+
+nav#primary-nav {
+  width: 40%;
+}
+
+nav#primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav#primary-nav li { 
+    font-size: 25px; 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;                 
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+  background: #fff;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* when open (use a class on <nav>) animate into an X */
+nav#primary-nav.open ~ .nav-toggle .bar:nth-child(1),
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+nav#primary-nav.open ~ .nav-toggle .bar:nth-child(2),
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+nav#primary-nav.open ~ .nav-toggle .bar:nth-child(3),
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+main {
+    margin: 40px 20px 15px 20px;
+    display: flex;
+    justify-content: center;
+    height: 65vh;
+}
+
+.character {
+    width: 35%;
+    height: auto;
+    font-size: 40px;
+    align-self: center;
+}
+
+.info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1 1 0;
+    width: 30%;
+    border: 1px solid #EB1730;
+}
+
+.card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card > h4 {
+    color: #FFF;
+    font-size: 25px;
+    text-align: center;
+    border-bottom:1px solid #EB1730;
+}
+
+.card > button {
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+    padding: 5px;
+    cursor: pointer;
+    border-top:1px solid #EB1730;
+}
+
+.card > button:hover {
+    background-color: #EB1730;
+}
+
+.details {
+    border-top: 1px solid #EB1730;
+    padding: 0 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-heigth 280ms ease, padding-top 200ms ease, padding-bottom 200ms ease;
+}
+
+.details > p {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.details.open {
+    max-height: 200px;
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+
+.dropdown .dropdown-content { display: none; position: absolute; }
+.dropdown .dropdown-content.show { display: block; }
+
+@media only screen and (min-width: 1300px) {
+    #last-img {
+        object-fit: contain;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    * {
+        overflow: visible;
+    }
+
+    .nav-toggle { 
+        display: block; 
+    }
+
+    header img { 
+        width: 45%; 
+        min-width: 120px; 
+    }
+
+
+    nav#primary-nav { 
+        width: auto; 
+    }
+
+    /* collapsed by default */
+    nav#primary-nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;               /* hidden until open */
+        flex-direction: column;
+        gap: 0;
+        background: #000;
+        border-top: 1px solid #EB1730;
+    }
+
+    nav#primary-nav.open ul {      /* shown when nav has .open */
+        display: flex;
+    }
+
+    nav#primary-nav li {
+        width: 100%;
+        border-bottom: 1px solid #222;
+    }
+
+    nav#primary-nav a {
+        display: block;
+        padding: 14px 16px;
+    }
+
+    /* dropdown inside mobile menu */
+    .dropdown { 
+        position: static; 
+    }
+
+    .dropdown .dropdown-content {
+        position: static;
+        display: none;
+        padding-left: 16px;
+        border-left: 2px solid #EB1730;
+    }
+
+    .dropdown .dropdown-content.show { 
+        display: block; 
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .character {
+        width: 100%;
+        height: auto;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .info-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card > img {
+        height: 90%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .card > h4 {
+        color: #fff;
+        text-align: center; 
+    }
+}

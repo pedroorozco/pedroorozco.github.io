@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafentanyl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14d50d2f54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="sidenav" id="mySidenav">   
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>   
+        <ul class="links-sidebar">
+            <li class="nav-item-side">
+                <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="./public/About Us/about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="./public/Menu/menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="./public/events.html" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item-side">
+                <a href='./public/Contact/contact.html' class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <div class="hero-heading-container">
+            <div class="nav-container">
+                <a href="./index.html"><img src="./images/logo.png" alt="Cafe Logo" id="logo"></a>
+                <a href="javascript:void(0)" class="responsive-menu-toggle hide-toggle" onclick="openNav()">
+                    <i class="fa-solid fa-bars" style="color:rgb(230,133,65); width:35px; font-size: 30px;"></i>
+                </a>
+                <div class="navbar" id="navbar">        
+                        <ul class="links">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./public/About Us/about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./public/Menu/menu.html" class="nav-link">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./public/events.html" class="nav-link">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href='./public/Contact/contact.html' class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="home-info-container">
+                <div class="homepage-information">
+                    <p>A real mexican cafe</p>
+                    <h1>Discover the taste of real coffee</h1>
+                    <a href="./public/about.html"><button id="meet-us-button">MEET US <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-intro">
+            <div class="underlap-object"></div>
+            <div class="info-card">
+                <div class="info-card-image">
+                    <img src="./images/french-toast.jpg" alt="French-Toast">
+                </div>  
+                <div class="info-card-right">
+                    <h1>Vivamus in diam condimentum maximus</h1>
+                    <div class="divider"></div>
+                    <p>
+                    Maecenas non laoreet odio. Fusce lobortis porttitor purus, vel 
+                    vestibulum libero pharetra vel. Pellentesque lorem augue, fermentum 
+                    nec nibh et, fringilla sollicitudin orci. Integer pharetra magna non 
+                    ante blandit lobortis. Sed mollis.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-intro">
+            <div class="menu-info-card">
+                <div class="info-card-left">
+                    <h1>Integer pharetra magna non ante blandit lobortis</h1>
+                    <div class="divider"></div>
+                    <p>
+                        Libero pharetra vel. Pellentesque lorem augue, fermentum nec 
+                        nibh et, fringilla sollicitudin orci. Integer pharetra magna 
+                        non ante blandit lobortis. Sed mollis.
+                    </p>
+                    <button id="see-menu-btn">SEE MENU CART</button>
+                </div>
+                <div class="menu-card-image">
+                    <img src="./images/coffee.jpg" alt="Coffee Image" id="card-image-two">
+                </div>
+            </div>
+        </div>
+        <div class="item-info">
+            <div class="underlap-object"></div>
+            <div class="item-info-card">
+                <div class="item-info-card-left">
+                    <img src="./images/coffee-machine.png" alt="Coffee machine" id="item-image-one">
+                    <h3>Fusce interdum justo quis libero ultricies</h3>
+                    <div class="divider"></div>
+                    <p>
+                        Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel 
+                        justo cursus, faucibus lorem eget, egestas eros.
+                    </p>
+                </div>
+                <div class="item-info-card-center">
+                    <img src="./images/drinks.jpg" alt="Drinks" id="item-image-two">
+                </div>
+                <div class="item-info-card-right-container">
+                    <div class="item-info-card-right">
+                        <h3>Fusce ut velit</h3>
+                        <p>$15,99</p>
+                        <img src="./images/coffee-bag.png" alt="Coffee Bag" id="item-image-three">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-intro">
+            <div class="video-card">
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/i4xTz_OwlSQ?si=efbuikAP8IUj2p9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-card-right">
+                    <h5>In condimentum maximus</h5>
+                    <h2>Macecenas non laoreet odio fusce lobortis</h2>
+                </div>
+            </div>
+        </div>
+        <div class="list-of-goods">
+            <div class="underlap-object-two">
+                <div class="info-inside">
+                    <h3>
+                        Curabitur sed iaculis dolor, non congue ligula.
+                        Maecenas imperdiet ante eget
+                    </h3>
+                    <p>
+                        Nunc urna libero, congue porta nibh a, semper feugiat sem. Sed auctor dui eleifend, 
+                        scelerisque eros ut, pellentesque nibh. Nam lacinia suscipit accumsan. Donec sodales, neque.
+                    </p>
+                    <ul>
+                        <li>
+                            Suspendisse a pellentesque dui, non felis.
+                        </li>
+                        <li>
+                            Quisque lorem tortor fringilla sed.
+                        </li>
+                        <li>
+                            Quisque cursus et, porttitor risus.
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="column">
+                <img src="./images/address.png" alt="Address Icon">
+                <h4>Address</h4>
+                <p>
+                    Calle Canela 552,<br>
+                    Granjas Mexico, <br>
+                    Itzacalco CDMX
+                </p>
+            </div>
+            <div class="column">
+                <img src="./images/email.png" alt="Address Icon">
+                <h4>Follow Us</h4>
+                <p>
+                    @Cafentanyl_
+                </p>
+            </div>
+            <div class="column">
+                <img src="./images/phone.png" alt="Address Icon">
+                <h4>Call Us</h4>
+                <p>
+                    +55 800 1116
+                </p>
+            </div>
+            <div class="column">
+                <img src="./images/clock.png" alt="Address Icon">
+                <h4>Opening Hours</h4>
+                <p>
+                    Monday - Friday: 8:00 -<br>
+                    18:00 <br>
+                    Sat - Sun: 8:00 - 16:00
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    margin: 0 20px 0 20px;
+    background-image: url("../../images/gojo_two.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #f8f8f8;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans Gothic", sans-serif;
+}
+
+
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+} 
+
+header img {
+    width: 20%;
+    height: auto;
+}
+
+nav {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    padding-left: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    margin: 60px 20px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 65vh;
+}
+
+.character {
+    width: 60%;
+    height: auto;
+    font-size: 40px;
+}
+
+.info-container {
+    height: 100%;
+    width: 30%;
+}
+
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: black;
+    background-image: url("../../images/gojo_standing.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card > h4, h5 {
+    color: #fff;
+    padding: 15px 0 10px 0;
+}
+
+.card > h4 {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.card > h5 {
+    text-align: right;
+    padding-right: 120px;
+}
+
+@media only screen and (min-width: 1300px) {
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: 60vh;
+        background-color: #EB1730;
+        background-position: center 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transform: translateY(30%);
+    }
+
+    main {
+        height: auto;
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    .character {
+        width: auto;
+        height: 120px;
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .info-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        background-color: black;
+        background-image: url("../../images/gojo_standing.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .card > h4, h5 {
+        color: #fff;
+        text-align: center; 
+    }
+
+    .card > h5 {
+        margin-top: 250px;
+        
+    }
+}

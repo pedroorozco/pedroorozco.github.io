@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJK</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <img src="../../images/logo.png" alt="Jujutsu Kaisen Logo"/>
+        <nav id="primary-nav">
+            <ul>
+            <li><a href="../../index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false">Characters</a>
+                <div class="dropdown-content" role="menu">
+                <a href="../Gojo/index.html">Gojo</a>
+                <a href="../Sukuna/index.html">Sukuna</a>
+                <a href="../Yuji/index.html">Yuji</a>
+                </div>
+            </li>
+
+            <li><a href="#">Episodes & Info</a></li>
+            <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile hamburger button -->
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main>
+        <div class="character">
+            <h1>Disaster <br> Curses</h1>
+        </div>
+        <div class="info-container">
+            <div class="card">
+                <button class="learn-btn">Learn More</button>
+                <div class="details" hidden>
+                    <p>
+                        Embodiement of volcanic disatsers. Uses fire type cursed techniques and has a domain 
+                    </p>
+                </div>
+                <img src="../../images/jogo.webp" alt="Jogo PNG"/>
+                <h4>Jogo</h4>
+            </div>
+            <div class="card">
+                <button class="learn-btn">Learn More</button>
+                <div class="details" hidden>
+                    <p>
+                        Embodiement of volcanic disatsers. Uses fire type cursed techniques and has a domain 
+                    </p>
+                </div>
+                <img src="../../images/mahito.webp" alt="Mahito PNG"/>
+                <h4>Mahito</h4>
+            </div>
+            <div class="card">
+                <button class="learn-btn">Learn More</button>
+                <div class="details" hidden>
+                    <p>
+                        Embodiement of volcanic disatsers. Uses fire type cursed techniques and has a domain 
+                    </p>
+                </div>
+                <img src="../../images/hanami_two.webp" alt="Hanami PNG"/>
+                <h4>Hanami</h4>
+            </div>
+            <div class="card">
+                <button class="learn-btn">Learn More</button>
+                <div class="details" hidden>
+                    <p>
+                        Sea/disaster curse. Commands shikigami like sea creatures; domain creates a lethal oceanic space.
+                    </p>
+                </div>
+                <img id="last-img" src="../../images/dagon.webp" alt="Dagon PNG"/>
+                <h4>Dagon</h4>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

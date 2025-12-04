@@ -1,0 +1,388 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    background-image: url("../../images/contact-background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    max-width: 100%;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    transition: 0.6s;
+}
+
+.responsive-menu-toggle {
+    text-decoration: none;
+}
+
+.navbar {
+    margin: 15px 50px 0 50px;
+}
+
+.links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+li:nth-of-type(5) a {
+    color: rgb(230, 133, 65);
+}
+
+.nav-link:hover {
+    color: rgb(230, 133, 65);
+}
+
+#logo {
+    width: 150px;
+    transition: 0.6s;
+}
+
+.contact-header {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-header > h1 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 65px;
+    font-weight: 500;
+    margin: 50px 1% 0;
+    transition: margin 0.5s;
+}
+
+.contact-info-container {
+    padding: 120px 0px 80px;
+}
+
+.info-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 50px 0 50px;
+}
+
+.info-card-left {
+    width: 50%;
+    padding-right: 5%;
+    align-self: center;
+    text-align: center;
+}
+
+.info-card-left > i {
+    margin: 0 auto 15px;
+}
+
+hr {
+    background: none;
+    color: transparent;
+    border: none;
+    margin: 0 auto 30px auto;
+}
+
+.info-card-left > h4 {
+    color: #2f2721;
+    font-size: 20px;
+    font-family: "Poppins";
+    margin-bottom: 15px;
+}
+
+.info-card-left > p {
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #8d827a;
+    margin: 0 0 15px;
+}
+
+.info-card-left > p > a {
+    text-decoration: none;
+    color: rgb(230, 133, 65);
+}
+
+.info-card-left > p > a:hover {
+    text-decoration: underline;
+    color: #c46421;
+}
+
+#social-icons {
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+#social-icons > a {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.info-card-right {
+    width: 50%;
+}
+
+.contact-form-section {
+    padding-bottom: 60px;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px 0 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 80px 0 80px;
+    width: 80%;
+}
+
+.contact-form > h3 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Poppins";
+    margin-bottom: 15px;
+}
+
+.contact-form > p {
+    color:#8d827a;
+    font-size: 16px;
+    font-family: "Poppins";
+    margin: 0 0 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input, textarea {
+    margin: 0 1% 40px;
+}
+
+input {
+    min-height: 2em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#name {
+    width: 48%;
+}
+
+#email {
+    width: 48%;
+}
+
+#subject {
+    width: 100%;
+}
+
+#message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 30px;
+    border:none;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(230, 133, 65);
+    color: white;
+    font-family: "Poppins";
+    font-size: 16px;
+}
+
+#footer {
+    background-color: #2f2721;
+    padding: 80px 0;
+}
+
+.footer-container {
+    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column {
+    width: 23%;
+    margin-bottom: 30px;
+}
+
+.column > img {
+    margin: 0 0 15px;
+}
+
+.column > h4 {
+    font-family: "Poppins";
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.column > p {
+    font-family: "Poppins";
+    color: #CCCCCC;
+    margin: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.links-sidebar {
+    list-style-type: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav li:nth-of-type(5) a {
+    color:#f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+.sticky {
+    background-color: #231b17;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.sticky #navbar {
+    align-self: baseline;
+}
+
+.sticky #logo {
+    width: 80px;
+    margin-left: 50px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .responsive-menu-toggle {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .sticky .responsive-menu-toggle {
+        margin-right: 50px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    .contact-header > h1 {
+        font-size: 49px;
+        margin-top: 80px;
+    }
+
+    .info-card-left > h4 {
+        font-size: 15px;
+    }
+
+    .info-card-left > p {
+        font-size: 13px;
+    }
+
+    .info-card-left, .info-card-right {
+        width: 100%;
+    }
+
+    .contact-form {
+        padding: 0 20px;
+    }
+
+    .contact-form > h3 {
+        font-size: 19px;
+    }
+
+    .contact-form > p {
+        font-size: 13px;
+    }
+
+    input[type="submit"] {
+        font-size: 13px;
+    }
+
+    #name, #email, #subject,#message,
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+    }
+}

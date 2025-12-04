@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14d50d2f54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="sidenav" id="mySidenav">   
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>   
+        <ul class="links-sidebar">
+            <li class="nav-item-side">
+                <a href="../../index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="../About Us/about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="../Menu/menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item-side">
+                <a href="../events.html" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item-side">
+                <a href='../Contact/contact.html' class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>    
+    <div id="main">
+        <div class="about-us-container">
+            <div class="nav-container">
+                <a href="../../index.html"><img src="../../images/logo.png" alt="Cafe Logo" id="logo"></a>
+                <a href="javascript:void(0)" class="responsive-menu-toggle hide-toggle" onclick="openNav()">
+                    <i class="fa-solid fa-bars" style="color:rgb(230,133,65); width:35px; font-size: 30px;"></i>
+                </a>
+                <div class="navbar" id="navbar">        
+                        <ul class="links">
+                            <li class="nav-item">
+                                <a href="../../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../About Us/about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Menu/menu.html" class="nav-link">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./public/events.html" class="nav-link">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href='../Contact/contact.html' class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="about-us-information">
+                <h1>About Cafentanyl</h1>
+            </div>
+        </div>
+        <div class="introduction">
+            <div class="intro-card">
+                <div class="intro-info-left">
+                    <h2>Class aptent taciti sociosqu torquent</h2>
+                        <div class="divider"></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris dolor, 
+                            gravida a varius blandit, auctor eget purus.
+                        </p>
+                        <p>
+                            Curabitur rutrum porta dui eget mollis. Nullam lacinia dictum auctor. Class 
+                            aptent taciti sociosqu ad litora torquent per conubia nostra.
+                        </p>
+                </div>
+                <div class="intro-rightside">
+                    <img src="../../images/about-us-one.jpg" alt="Coffee Image With Cacti Design"> 
+                </div>
+            </div>
+        </div>
+        <div class="about-us-section-two one">
+            <div class="underlap-object"></div>
+            <div class="about-us-card-wrapper">
+                <div class="about-us-image">
+                    <img src="../../images/nachos.jpg" alt="Cafe Counter">
+                </div>
+                <div class="about-us-card">
+                    <h2>Nulla mauris dolor gravida a varius blandit</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris dolor, gravida 
+                        a varius blandit, auctor eget purus. Phasellus scelerisque sapien sit amet mauris 
+                        laoreet, eget scelerisque nunc cursus. Duis ultricies malesuada.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about-us-section-two two">
+            <div class="underlap-object"></div>
+            <div class="about-us-card-wrapper">
+                <div class="about-us-image">
+                    <img src="../../images/corndogs.jpg" alt="Cafe Counter">
+                </div>
+                <div class="about-us-card">
+                    <h2>Nulla mauris dolor gravida a varius blandit</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris dolor, gravida 
+                        a varius blandit, auctor eget purus. Phasellus scelerisque sapien sit amet mauris 
+                        laoreet, eget scelerisque nunc cursus. Duis ultricies malesuada.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="join-section">
+            <div class="join-card-container">
+                <div class="join-card">
+                    <h2>Join Cafentanyl's Newsletter Today!</h2>
+                    <div class="join-divider"></div>
+                    <p>
+                        Pellentesque lorem augue, fermentum nec nibh et, fringilla sollicitudin orci. 
+                        Integer pharetra magna non ante blandit lobortis. Sed mollis.
+                    </p>
+                    <button id="see-menu-btn">SEE MENU CART</button>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="column">
+                <img src="../../images/address.png" alt="Address Icon">
+                <h4>Address</h4>
+                <p>
+                    Calle Canela 552,<br>
+                    Granjas Mexico, <br>
+                    Itzacalco CDMX
+                </p>
+            </div>
+            <div class="column">
+                <img src="../../images/email.png" alt="Address Icon">
+                <h4>Follow Us</h4>
+                <p>
+                    @Cafentanyl_
+                </p>
+            </div>
+            <div class="column">
+                <img src="../../images/phone.png" alt="Address Icon">
+                <h4>Call Us</h4>
+                <p>
+                    +55 800 1116
+                </p>
+            </div>
+            <div class="column">
+                <img src="../../images/clock.png" alt="Address Icon">
+                <h4>Opening Hours</h4>
+                <p>
+                    Monday - Friday: 8:00 -<br>
+                    18:00 <br>
+                    Sat - Sun: 8:00 - 16:00
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
