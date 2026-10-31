@@ -1,4 +1,3 @@
-<!-- I used AI to format resume into HTML as I felt lazy -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +26,10 @@
             color: #000000;
             width: 8.5in;
             max-width: 100%;
-            padding: 75px 75px 80px;
+            padding: 56px 58px;
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-            font-size: 15px;
-            line-height: 1.25;
+            font-size: 11pt;
+            line-height: 1.28;
         }
 
         header {
@@ -100,6 +99,7 @@
         .education-block .title-line {
             display: flex;
             justify-content: space-between;
+            gap: 12px;
             font-weight: bold;
         }
 
@@ -128,6 +128,7 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            gap: 12px;
             font-weight: bold;
         }
 
@@ -146,27 +147,62 @@
 
         .skills-list {
             margin-top: 2pt;
-            padding-left: 18pt;
+            padding-left: 0;
             font-size: 11pt;
+            list-style: none;
         }
 
         .skills-list li {
-            margin-bottom: 1pt;
+            margin-bottom: 3pt;
         }
 
         @page {
             size: 8.5in 11in;
-            margin: 0;
+            margin: 0.6in;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .page {
+                padding: 28px 20px;
+            }
+
+            .title-line,
+            .experience-header {
+                flex-wrap: wrap;
+                gap: 2px 12px;
+            }
+
+            header a,
+            .objective a {
+                overflow-wrap: anywhere;
+            }
         }
 
         @media print {
             body {
                 background: #ffffff;
+                display: block;
+                min-height: auto;
+                padding: 0;
             }
 
             .page {
+                width: auto;
+                max-width: none;
+                padding: 0;
                 box-shadow: none;
                 margin: 0;
+            }
+
+            header,
+            .education-block,
+            .experience-block,
+            .skills {
+                break-inside: avoid;
             }
         }
     </style>
@@ -190,14 +226,14 @@
         <h2>Career Objective</h2>
         <p>
             <span class="label">Portfolio:</span>
-            <a href="https://pedroorozco.github.io/html-portfolio/" target="_blank" rel="noopener noreferrer">
-                https://pedroorozco.github.io/html-portfolio/
+            <a href="https://pedroorozco.github.io/" target="_blank" rel="noopener noreferrer">
+                https://pedroorozco.github.io/
             </a>
         </p>
         <p>
-            Applications Developer with the ability to program web apps utilizing HTML, CSS, JavaScript, PHP, Java, etc. I am
-            undergoing the process of obtaining a Bachelor's in Computer Science to further enhance my skills and understanding
-            of developing software.
+            Application developer and Computer Science student with hands-on experience building full-stack web applications
+            using Java, Spring Boot, Next.js, and MySQL. Seeking a software engineering or front-end development role where
+            I can build reliable, user-focused applications and contribute strong problem-solving and code evaluation skills.
         </p>
     </section>
 
@@ -252,11 +288,11 @@
                 <span>AI Trainer</span>
                 <span>May 2024 - Present</span>
             </div>
-            <div class="experience-subline"><span class="label">Data Annotation</span>, New York, NY</div>
+            <div class="experience-subline"><span class="label">Data Annotation</span>, Remote</div>
             <ul>
-                <li>Work with various AI models to ensure code being produced by them is accurate.</li>
-                <li>Work collaboratively with others through Slack.</li>
-                <li>Responsible for labeling, correcting, and categorizing AI model outputs to improve machine learning algorithms.</li>
+                <li>Analyze AI-generated code for correctness, logical errors, and adherence to requirements, providing targeted feedback to improve model reliability.</li>
+                <li>Compare, correct, and categorize model responses to create training data that strengthens the accuracy and reasoning of AI systems.</li>
+                <li>Collaborate with other trainers through Slack to interpret project guidelines and maintain consistent evaluation standards.</li>
             </ul>
         </div>
     </section>
@@ -264,14 +300,10 @@
     <section class="skills">
         <h2>Technical Skills</h2>
         <ul class="skills-list">
-            <li>Java</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>HTML / CSS</li>
-            <li>JavaScript</li>
-            <li>Joomla!</li>
-            <li>Visual Basic</li>
-            <li>Git / GitHub</li>
+            <li><span class="label">Languages:</span> Java, Python, C++, JavaScript, TypeScript, SQL, HTML, CSS, Visual Basic</li>
+            <li><span class="label">Frameworks and Runtime:</span> React, Next.js, Node.js, Spring Boot, Tailwind CSS</li>
+            <li><span class="label">Databases and APIs:</span> MySQL, Flyway, REST APIs, Postman</li>
+            <li><span class="label">Tools:</span> Git, GitHub, Maven, npm, IntelliJ IDEA, Joomla!</li>
         </ul>
     </section>
 </div>
