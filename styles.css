@@ -366,46 +366,167 @@ p {
 
 #contact {
     width: 100%;
-    min-height: 100vh;
-    background-image: url("./images/pxfuel.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    min-height: 80vh;
+    padding: 100px 6%;
+    background: #202129;
+    color: #f7f5f2;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-#contact > h2 {
-    font-size: 4rem;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    border-top: 4px solid #be3144;
+    scroll-margin-top: 64px;
 }
 
 .contact-container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    transform: translate(0, 150px);
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 72px;
+    align-items: center;
 }
 
-.contact-card {
+#contact p {
+    text-align: left;
+}
+
+.contact-eyebrow {
+    color: #ff9aa8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 22px;
+}
+
+#contact h2 {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+
+.contact-description {
+    max-width: 390px;
+    margin-top: 24px;
+    color: #c5c5ce;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.contact-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
+    padding-bottom: 8px;
+    color: #f7f5f2;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #ff9aa8;
+}
+
+.contact-resume:hover {
+    color: #ff9aa8;
+}
+
+.contact-links {
+    min-width: 0;
+}
+
+.contact-link {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 24px;
+    gap: 18px;
+    align-items: center;
+    padding: 24px 0;
+    color: #f7f5f2;
+    text-decoration: none;
+    border-bottom: 1px solid #494952;
+}
+
+.contact-link:first-child {
+    border-top: 1px solid #494952;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 225px;
-    background-color: #3a3d40;
-    color: #fff;
-    padding: 15px;
+    border: 1px solid #565660;
+    border-radius: 50%;
+    color: #f7f5f2;
+}
+
+.contact-icon svg,
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-linkedin {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contact-link-copy {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contact-label {
+    color: #c5c5ce;
+    font-size: 0.8rem;
+}
+
+.contact-value {
+    font-size: 1rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+    font-size: 1.6rem;
+    color: #ff9aa8;
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover .contact-value {
+    color: #ff9aa8;
+}
+
+.contact-link:hover .contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+#contact a:focus-visible {
+    outline: 2px solid #ff9aa8;
+    outline-offset: 6px;
+}
+
+.contact-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-arrow {
+        transition: none;
+    }
 }
 
 @media (min-width: 888px) {
@@ -459,19 +580,27 @@ p {
         margin-top: 20%;
     }
 
-    #contact {
-        background-position: 43% center;
-    }
 }
 
 @media (max-width: 700px) {
     #contact {
-        justify-content: flex-end;
+        min-height: auto;
+        padding: 80px 24px;
     }
+
     .contact-container {
-        justify-content: center;
-        gap: 5px;
-        transform: translateY(-90px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+    }
+
+    .contact-link {
+        grid-template-columns: 42px minmax(0, 1fr) 20px;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
     }
 }
 
@@ -524,13 +653,4 @@ p {
         font-size: 11px;
     }
 
-    .contact-container {
-        transform: translateY(-150px);
-        gap: 50px;
-    }
-
-    .contact-card {
-        width: auto;
-        padding: 10px;
-    }
 }

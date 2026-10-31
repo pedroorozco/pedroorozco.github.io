@@ -74,35 +74,6 @@
         <section id="projects">
             <div class="projects-container">
                 <h2>Projects</h2>
-                <div class="left card">
-                    <a href="files/statement.pdf"><img class="tile-image" src="images/problem.png" alt="Problem Statement Screenshot"></a>
-                    <a href="files/statement.pdf"><h3 class="card-title">Problem Statement</h3></a>
-                    <p class="card-text">
-                        UofSC students struggle to quickly determine whether required books are freely and legally
-                        accessible because availability is scattered across campus library systems and public‑domain
-                        repositories.
-                    </p>
-                </div>
-                <div class="right card">
-                    <a href="files/Affinity_DOC.pdf"><img class="tile-image" src="images/Affinity_IMG.png" alt="Affinity Diagram Screenshot"></a>
-                    <a href="files/Affinity_DOC.pdf"><h3 class="card-title">Affinity Diagram</h3></a>
-                    <p class="card-text">
-                        This affinity diagram organizes potential solution (book finder webpage similar to pages for
-                        flights such as TripAdvisor but for books) into categories such as source choices, community,
-                        UX, etc. It helps clarify the scope and potential obstacles for potential solution.
-                    </p>
-                </div>
-
-                <div class="centered card">
-                    <a href="files/Sketches.pdf"><img class="tile-image" src="images/Mock_Homepage.png" alt="Sketches screenshot"></a>
-                    <a href="files/Sketches.pdf"><h3 class="card-title">Sketches</h3></a>
-                    <p class="card-text">
-                        Basic sketches outlining specific components of a Book Finder webpage including a mock homepage,
-                        mock search filters/sorting options, mock page displaying specific book details, and a mock page
-                        displaying what results should look like after a user searches for a book. Sketches were
-                        initially created with Chat-GPT for template, but later edited by myself to ensure consistency and layout
-                    </p>
-                </div>
                 <div class="right card">
                     <a href="files/public/Pokedex/index.html"><img class="tile-image" src="images/pokedex.png" alt="Pokedex Project Screenshot"></a>
                     <a href="files/public/Pokedex/index.html"><h3 class="card-title">Pokedex Project</h3></a>
@@ -166,25 +137,35 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>contact me</h2>
+        <section id="contact" aria-labelledby="contact-title">
             <div class="contact-container">
-                <div class="contact-card">
-                    <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/pedro-orozco-b5146026b/">
-                        <img src="./images/icons8-linkedin-50.png" alt="LinkedIn Icon">
-                    </a>
+                <div class="contact-intro">
+                    <p class="contact-eyebrow">Contact Me</p>
+                    <h2 id="contact-title">Let's build<br>something useful.</h2>
+                    <p class="contact-description">
+                        Have a role, a project, or an idea you'd like to discuss? I'd love to hear about it.
+                    </p>
+                    <a class="contact-resume" href="files/Resume_Orozco_Pedro.pdf">View my resume <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <div class="contact-card">
-                    <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/pedro-orozco-b5146026b/">
-                        <img src="./images/icons8-linkedin-50.png" alt="LinkedIn Icon">
+                <div class="contact-links">
+                    <a class="contact-link contact-email" href="mailto:hollowshock11@gmail.com">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+                        </span>
+                        <span class="contact-link-copy"><span class="contact-label">Email</span><span class="contact-value">hollowshock11<wbr>@gmail.com</span></span>
+                        <span class="contact-arrow" aria-hidden="true">&nearr;</span>
                     </a>
-                </div>
-                <div class="contact-card">
-                    <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/pedro-orozco-b5146026b/">
-                        <img src="./images/icons8-linkedin-50.png" alt="LinkedIn Icon">
+                    <a class="contact-link" href="https://www.linkedin.com/in/pedro-orozco-b5146026b/" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icon contact-linkedin" aria-hidden="true">in</span>
+                        <span class="contact-link-copy"><span class="contact-label">LinkedIn</span><span class="contact-value">Connect with me</span></span>
+                        <span class="contact-arrow" aria-hidden="true">&nearr;</span>
+                        <span class="contact-sr-only"> (opens in a new tab)</span>
+                    </a>
+                    <a class="contact-link" href="https://github.com/pedroorozco" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icon" aria-hidden="true"><img src="./images/github-mark-white.png" alt="" width="24" height="24"></span>
+                        <span class="contact-link-copy"><span class="contact-label">GitHub</span><span class="contact-value">Explore my code</span></span>
+                        <span class="contact-arrow" aria-hidden="true">&nearr;</span>
+                        <span class="contact-sr-only"> (opens in a new tab)</span>
                     </a>
                 </div>
             </div>
